@@ -246,7 +246,7 @@ WaveSchedule
             {
                 Class Heavyweapons
                 Skill Expert
-                Item "Witch Hat"
+                Item "The Crone's Dome"
             }
         }
         WaveSpawn //WAVE 03c: [GIANT] 5 total, 2 active, Soldier 
@@ -284,7 +284,7 @@ WaveSchedule
             TFBot
             {
                 Template T_TFBot_Giant_Heavyweapons
-                Item "Witch Hat"
+                Item "The Crone's Dome"
                 Skill Expert
             }
         }
@@ -478,7 +478,7 @@ WaveSchedule
                 {
                     Template T_TFBot_Giant_Heavyweapons_Deflector
                     Attributes AlwaysCrit
-                    Item "Witch Hat"
+                    Item "The Crone's Dome"
                     Skill Expert
                 }
                 TFBot
@@ -770,7 +770,7 @@ WaveSchedule
                     Class Heavyweapons
                     Skill Expert
                     Attributes AlwaysCrit
-                    Item "Witch Hat"
+                    Item "The Crone's Dome"
                     ItemAttributes
                     {
                         ItemName "TF_WEAPON_MINIGUN"
