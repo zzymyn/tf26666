@@ -8,7 +8,7 @@
 		"1"
 		{
 			"map" "mvm_ghost_town"
-			"popfile" "mvm_ghost_town"
+			"popfile" "mvm_ghost_town_6666"
 		}
 	}
 	"2"
