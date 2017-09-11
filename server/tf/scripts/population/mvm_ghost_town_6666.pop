@@ -4,8 +4,8 @@
 WaveSchedule
 {
 
-    StartingCurrency        4000
-    RespawnWaveTime         2
+    StartingCurrency 4000
+    RespawnWaveTime 1
     CanBotsAttackWhileInSpawnRoom Yes
     FixedRespawnWaveTime Yes
     EventPopfile Halloween
@@ -74,7 +74,7 @@ WaveSchedule
         }
 
         Checkpoint Yes
-        
+
         //STAGE 01 //Currency 700 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
         WaveSpawn //WAVE 01a: 60 total, 10 active, Scout (bonk) 
@@ -86,8 +86,8 @@ WaveSchedule
             SpawnCount 10
             WaitBeforeStarting 0
             WaitBetweenSpawns 0
-            TotalCurrency 400        
-        
+            TotalCurrency 400
+
             TFBot
             {
                 Template T_TFBot_Scout_Bonk
@@ -110,7 +110,7 @@ WaveSchedule
             WaitBeforeStarting 3
             WaitBetweenSpawns 7
             TotalCurrency 300        
-        
+
             TFBot
             {
                 Class Pyro
@@ -134,13 +134,14 @@ WaveSchedule
             WaitBeforeStarting 5
             WaitBetweenSpawns 5
             TotalCurrency 300        
-        
+
             TFBot
             {
                 Template T_TFBot_Giant_DemoMan_PrinceTavish
                 Attributes AlwaysCrit
                 Item "Spine-Chilling Skull"
                 Skill Expert
+                Name "Fast Demoknight"
                 CharacterAttributes
                 {
                     "move speed bonus" 1.0
@@ -187,7 +188,7 @@ WaveSchedule
             MaxActive 10
             SpawnCount 2
             WaitForAllDead "wave01"
-            WaitBeforeStarting 2
+            WaitBeforeStarting 3
             WaitBetweenSpawns 1
             TotalCurrency 300        
         
@@ -542,6 +543,7 @@ WaveSchedule
             {
                 Class Spy
                 Skill Expert
+                Name "Shy Guy"
             }
         }
 
@@ -607,7 +609,7 @@ WaveSchedule
                 }
             }
         }
-        WaveSpawn //WAVE 08b: [CHIEF GAUNTLET]  
+        WaveSpawn //WAVE 08b: [CHIEF SOLDIER]
         {
             Name "wave08b"
             Where spawnbot
@@ -616,11 +618,11 @@ WaveSchedule
             WaitBeforeStarting 5
             WaitBetweenSpawns 0
             TotalCurrency 300
-            Health 30000
             
             TFBot
             {
                 Template T_TFBot_Chief_Soldier
+                Health 45000
                 Skill Expert
             }
         }
@@ -636,7 +638,7 @@ WaveSchedule
             WaitForAllSpawned "wave08b"
             WaitBeforeStarting 5
             WaitBetweenSpawns 1
-            TotalCurrency 300
+            TotalCurrency 300        
         
             TFBot
             {
@@ -653,7 +655,7 @@ WaveSchedule
                 }
             }
         }
-        WaveSpawn //WAVE 08c: [CHIEF GAUNTLET]  
+        WaveSpawn //WAVE 08c: [CHIEF DEMO]
         {
             Name "wave08c"
             Where spawnbot
@@ -666,7 +668,7 @@ WaveSchedule
             TFBot
             {
                 Template T_TFBot_Chief_Demo_Atomic
-                Health 25000
+                Health 30000
                 Skill Expert
             }
         }
@@ -677,7 +679,7 @@ WaveSchedule
             Where spawnbot_scattered
             RandomSpawn 1
             TotalCount 75
-            MaxActive 18
+            MaxActive 19
             SpawnCount 5
             WaitForAllSpawned "wave08c"
             WaitBeforeStarting 5
@@ -696,10 +698,10 @@ WaveSchedule
                 {
                     ItemName "The Scorch Shot"
                     "damage causes airblast" 1
-                    "damage bonus" 2.0
-                    "fire rate bonus" 0.75
-                    "faster reload rate" 1.25
-                    "Projectile speed increased" 0.35
+                    "damage penalty" 0.8
+                    "fire rate bonus" 0.5
+                    "faster reload rate" 0.5
+                    "Projectile speed increased" 1.0
                 }
                 CharacterAttributes
                 {
@@ -707,21 +709,21 @@ WaveSchedule
                 }
             }
         }
-        WaveSpawn //WAVE 08d: 75 total, 20 active, Pyro (Always Crit)
+        WaveSpawn //WAVE 08d: [CHIEF PYRO]
         {
-            Name "wave08d"        
+            Name "wave08d"
             Where spawnbot
-            TotalCount 5
-            MaxActive 2
-            SpawnCount 1
+            TotalCount 1
             WaitForAllDead "wave08c"
             WaitBeforeStarting 5
-            WaitBetweenSpawns 15
+            WaitBetweenSpawns 0
             TotalCurrency 300
 
             TFBot
             {
-                Template T_TFBot_Giant_Pyro_Flare_Spammer_ScorchShot
+                Template T_TFBot_Chief_Pyro
+                Name "Time for a BBQ"
+                Health 30000
                 Skill Expert
             }
         }
@@ -783,7 +785,8 @@ WaveSchedule
                 }
             }
         }
-        WaveSpawn //WAVE 08g: [CHIEF GAUNTLET]  
+
+        WaveSpawn //WAVE 08g: [CHIEF HEAVY]
         {
             Name "wave08g"
             Where spawnbot
@@ -796,6 +799,7 @@ WaveSchedule
             TFBot
             {
                 Template T_TFBot_Chief_Gauntlet
+                Name "That's No Tank"
             }
         }
     }    
