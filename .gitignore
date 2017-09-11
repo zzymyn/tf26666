@@ -1,0 +1,2 @@
+# Ignore everything by default, have to manually add files with git add -f
+*
