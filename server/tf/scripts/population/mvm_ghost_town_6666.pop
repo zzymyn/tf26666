@@ -648,7 +648,7 @@ WaveSchedule
             Name "wave08b"
             Where spawnbot
             TotalCount 1
-            WaitForAllDead "wave08a"
+            WaitForAllDead "wave08aa"
             WaitBeforeStarting 5
             WaitBetweenSpawns 0
             TotalCurrency 300
@@ -702,6 +702,7 @@ WaveSchedule
             TFBot
             {
                 Template T_TFBot_Chief_Demo_Atomic
+                ClassIcon demo_bomber
                 Health 30000
                 Skill Expert
             }
@@ -756,9 +757,22 @@ WaveSchedule
             TFBot
             {
                 Template T_TFBot_Chief_Pyro
+                ClassIcon pyro_flare_giant
+                Attributes AlwaysCrit
                 Name "Time for a BBQ"
-                Health 30000
+                Health 25000
                 Skill Expert
+                WeaponRestrictions SecondaryOnly
+                Item "The Scorch Shot"
+                ItemAttributes
+                {
+                    ItemName "The Scorch Shot"
+                    "damage causes airblast" 1
+                    "damage penalty" 0.8
+                    "fire rate bonus" 0.5
+                    "faster reload rate" 0.5
+                    "Projectile speed increased" 1.0
+                }
             }
         }
 
@@ -833,6 +847,7 @@ WaveSchedule
             TFBot
             {
                 Template T_TFBot_Chief_Gauntlet
+                Attributes AlwaysCrit
                 Name "That's No Tank"
             }
         }
