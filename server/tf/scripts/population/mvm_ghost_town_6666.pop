@@ -3,7 +3,6 @@
 
 WaveSchedule
 {
-
     StartingCurrency 4000
     RespawnWaveTime 0
     CanBotsAttackWhileInSpawnRoom Yes
@@ -175,7 +174,6 @@ WaveSchedule
                 TFBot
                 {
                     Template T_TFBot_Medic_QuickUber
-                    Attributes ProjectileShield
                     Item "The Warsworn Helmet"
                     Skill Expert
                 }
@@ -204,7 +202,6 @@ WaveSchedule
                 TFBot
                 {
                     Template T_TFBot_Medic_QuickUber
-                    Attributes ProjectileShield
                     Item "The Warsworn Helmet"
                     Skill Expert
                 }
@@ -579,6 +576,41 @@ WaveSchedule
             }
         }
 
+        WaveSpawn //WAVE 08aa: 75 total, 20 active, Medic (Shield)
+        {
+            Name "wave08aa"
+            Where spawnbot_scattered
+            RandomSpawn 1
+            TotalCount 75
+            MaxActive 20
+            SpawnCount 5
+            WaitForAllSpawned "wave08a"
+            WaitBeforeStarting 5
+            WaitBetweenSpawns 1
+            TotalCurrency 400
+
+            TFBot
+            {
+                Class Medic
+                Name "Shield Medic"
+                Skill Expert
+                Attributes SpawnWithFullCharge
+                Attributes ProjectileShield
+                WeaponRestrictions SecondaryOnly
+                Item "The Warsworn Helmet"
+                Item "The Quick-Fix"
+                ItemAttributes
+                {
+                    ItemName "The Quick-Fix"
+                    "generate rage on heal" 2
+                }
+                CharacterAttributes
+                {
+                    "move speed bonus" 1.1
+                }
+            }
+        }
+
         WaveSpawn //WAVE 08b: 75 total, 20 active, Soldier (Always Crit)
         {
             Name "wave08b"
@@ -587,7 +619,7 @@ WaveSchedule
             TotalCount 75
             MaxActive 20
             SpawnCount 5
-            WaitForAllSpawned "wave08a"
+            WaitForAllSpawned "wave08aa"
             WaitBeforeStarting 5
             WaitBetweenSpawns 1
             TotalCurrency 400        
