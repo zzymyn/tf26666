@@ -5,7 +5,7 @@ WaveSchedule
 {
 
     StartingCurrency 4000
-    RespawnWaveTime 1
+    RespawnWaveTime 0
     CanBotsAttackWhileInSpawnRoom Yes
     FixedRespawnWaveTime Yes
     EventPopfile Halloween
@@ -175,6 +175,7 @@ WaveSchedule
                 TFBot
                 {
                     Template T_TFBot_Medic_QuickUber
+                    Attributes ProjectileShield
                     Item "The Warsworn Helmet"
                     Skill Expert
                 }
@@ -203,6 +204,7 @@ WaveSchedule
                 TFBot
                 {
                     Template T_TFBot_Medic_QuickUber
+                    Attributes ProjectileShield
                     Item "The Warsworn Helmet"
                     Skill Expert
                 }
