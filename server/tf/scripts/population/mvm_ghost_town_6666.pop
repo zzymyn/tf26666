@@ -4,7 +4,7 @@
 WaveSchedule
 {
     StartingCurrency 4000
-    RespawnWaveTime 0
+    RespawnWaveTime 1
     CanBotsAttackWhileInSpawnRoom Yes
     FixedRespawnWaveTime Yes
     EventPopfile Halloween
@@ -581,32 +581,44 @@ WaveSchedule
             Name "wave08aa"
             Where spawnbot_scattered
             RandomSpawn 1
-            TotalCount 75
+            TotalCount 76
             MaxActive 20
-            SpawnCount 5
+            SpawnCount 4
             WaitForAllSpawned "wave08a"
             WaitBeforeStarting 5
             WaitBetweenSpawns 1
             TotalCurrency 400
 
-            TFBot
+            Squad
             {
-                Class Medic
-                Name "Shield Medic"
-                Skill Expert
-                Attributes SpawnWithFullCharge
-                Attributes ProjectileShield
-                WeaponRestrictions SecondaryOnly
-                Item "The Warsworn Helmet"
-                Item "The Quick-Fix"
-                ItemAttributes
+                TFBot
                 {
-                    ItemName "The Quick-Fix"
-                    "generate rage on heal" 2
+                    Template T_TFBot_Heavyweapons_Gnome
+                    Skill Expert
+                    Scale 0.65
+                    Attributes AlwaysCrit
+                    Item "The All-Father"
+                    Item "Point and Shoot"
                 }
-                CharacterAttributes
+                TFBot
                 {
-                    "move speed bonus" 1.1
+                    Class Medic
+                    Name "Shield Medic"
+                    Skill Expert
+                    Attributes SpawnWithFullCharge
+                    Attributes ProjectileShield
+                    WeaponRestrictions SecondaryOnly
+                    Item "The Warsworn Helmet"
+                    Item "The Quick-Fix"
+                    ItemAttributes
+                    {
+                        ItemName "The Quick-Fix"
+                        "generate rage on heal" 2
+                    }
+                    CharacterAttributes
+                    {
+                        "move speed bonus" 1.1
+                    }
                 }
             }
         }
@@ -619,7 +631,7 @@ WaveSchedule
             TotalCount 75
             MaxActive 20
             SpawnCount 5
-            WaitForAllSpawned "wave08aa"
+            WaitForAllDead "wave08aa"
             WaitBeforeStarting 5
             WaitBetweenSpawns 1
             TotalCurrency 400        
@@ -658,6 +670,11 @@ WaveSchedule
                 Template T_TFBot_Chief_Soldier
                 Health 45000
                 Skill Expert
+                CharacterAttributes
+                {
+                    "move speed bonus"    0.4
+                    "health regen"    200
+                }
             }
         }
 
@@ -705,6 +722,11 @@ WaveSchedule
                 ClassIcon demo_bomber
                 Health 30000
                 Skill Expert
+                CharacterAttributes
+                {
+                    "move speed bonus"    0.4
+                    "health regen"    200
+                }
             }
         }
 
@@ -772,6 +794,11 @@ WaveSchedule
                     "fire rate bonus" 0.5
                     "faster reload rate" 0.5
                     "Projectile speed increased" 1.0
+                }
+                CharacterAttributes
+                {
+                    "move speed bonus"    0.4
+                    "health regen"    200
                 }
             }
         }
