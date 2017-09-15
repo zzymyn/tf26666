@@ -668,7 +668,7 @@ WaveSchedule
             TFBot
             {
                 Template T_TFBot_Chief_Soldier
-                Health 45000
+                Health 50000
                 Skill Expert
                 CharacterAttributes
                 {
@@ -720,7 +720,7 @@ WaveSchedule
             {
                 Template T_TFBot_Chief_Demo_Atomic
                 ClassIcon demo_bomber
-                Health 30000
+                Health 40000
                 Skill Expert
                 CharacterAttributes
                 {
@@ -782,7 +782,7 @@ WaveSchedule
                 ClassIcon pyro_flare_giant
                 Attributes AlwaysCrit
                 Name "Time for a BBQ"
-                Health 25000
+                Health 30000
                 Skill Expert
                 WeaponRestrictions SecondaryOnly
                 Item "The Scorch Shot"
