@@ -1,6 +1,6 @@
 "tf_mvm_missioncycle.res"
 {	
-	"categories" "2"
+	"categories" "1"
 	"1"
 	{
 		"count" "1"
